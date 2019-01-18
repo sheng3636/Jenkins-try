@@ -6,8 +6,8 @@
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="row in splitGrounp(equipList)">
-                            <div class="item" v-for="item in row">
+                        <div class="swiper-slide" v-for="(row,index) in splitGrounp(equipList)" :key="index">
+                            <div class="item" v-for="(item,index) in row" :key="index">
                                 <div class="equip-img"><img src="../../assets/images/web1.png" alt=""></div>
                                 <p>{{item.equipName}}</p>
                                 <p>{{item.number}}</p>
