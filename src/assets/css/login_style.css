@@ -1,0 +1,81 @@
+/*页面样式*/
+@charset "utf-8";
+html,body{height: 100%}
+
+body { -webkit-text-size-adjust:none;}
+
+a,img { border:none;-webkit-touch-callout: none;}
+
+/*禁用了复制粘贴功能*/
+/*body{-webkit-user-select: none;user-select:none;}*/
+
+/*修正chrome表单自动填充后,input文本框的背景会变成偏黄色的 */
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;background-color:transparent;}
+
+/*清除浮动*/
+.clearfix{zoom:1;}
+.clearfix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;font-size: 0;}
+
+/*文字溢出裁切*/
+.textcut{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+/*清除ul,ol,dl,li,dt,dd 默认列表样式*/
+ul,ol,dl,li,dt,dd { list-style:none;  box-sizing: border-box;}
+
+/*================================基本信息==============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,form, label, legend, table, caption, tbody,tfoot, thead, tr, th, td, article, aside,canvas, details, embed, figure, figcaption,footer, header, hgroup, menu, nav, output,ruby, section, summary, time, mark, audio,video,input{ margin:0; padding:0;box-sizing: border-box; }
+body{ font-family:'Microsoft YaHei',"微软雅黑", Arial, "Segoe UI", sans-serif; font-size:12px; line-height:1.6em; color:#333; }
+/* a标签reset */
+a {color:#333; text-decoration:none; -webkit-transition:all .5s ease; -webkit-tap-highlight-color: rgba(0,0,0,0);/*适用于ios，重设链接元素或可点击元素的背景*/}
+a:hover{-webkit-transition:all .5s ease;text-decoration:none;}
+a:focus{text-decoration:none;}
+/*input标签reset*/
+input{-webkit-appearance: none}
+input[type="number"]{-moz-appearance:textfield;}
+input[type="text"]{-webkit-appearance: none;}
+input:-moz-placeholder {color: #999;} /* Mozilla Firefox 4 to 18 */
+input::-moz-placeholder {color: #999;}/* Mozilla Firefox 19+ */
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {color: #999;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #999;}
+.fl{float: left;}
+.fr{float: right;}
+
+/* img{max-width:100%;max-height:100%;} */
+/*页面样式*/
+.wrapper{max-width: 1280px; margin: 0 auto;  }
+.login{ position: relative; zoom: 1; background: url("../images/login/bg03.png") no-repeat center top; height: 100vh; -webkit-background-size:cover; background-size:cover;  }
+.login .header{ background: #fff;  }
+.login .header .imgs{ height: 7.5vh; padding: 2vh 0;  }
+.login .divleft, .login .divright { width: 50%; float: left;  }
+.login .divleft{ text-align: right; padding-right: 2vw; height: 100%;  background-size: cover; padding-top: 16vh;  }
+.login .divleft .imgs { padding-top: 11vh; width: 15.6vw;  float: right; text-align: right;  }
+.login .divright { padding-top: 16vh;  }
+.login .divright .form-groups { width: 22.4vw;  background: url(../images/login/logo-bg01.png) no-repeat top center; padding: 2.8vw; background-size: cover;  }
+.login .divright .form-groups .title { font-size: 32px; color: #00deff;  line-height: 2;  margin-bottom: 1.7vh;  }
+.login .form-groups .form-group{position: relative;margin-bottom: 15px;}
+.login .form-groups .form-group label{position: absolute;left: 0;top: 0;width: 45px;text-align: center;height: 40px;line-height: 40px;}
+.login .form-groups input{width: 100%;height: 40px;line-height: 40px;outline:none;border: 1px solid #ddd;  -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.login .form-groups .form-group label .iconfont{font-size: 22px;color: #999;}
+.login .form-groups .form-group .form-control{height: 40px;line-height: 40px;text-indent: 45px;}
+.login .form-groups .form-group .form-control:focus{box-shadow: 0 0 6px #1faffd;border: 1px solid #1faffd;}
+.login .form-groups .form-group .form-control.error{border:1px solid #f00;
+  -webkit-box-shadow: 0 0 15px rgba(255,0,0,.5); -moz-box-shadow: 0 0 15px rgba(255,0,0,.5);box-shadow: 0 0 15px rgba(255,0,0,.5);}
+.login .form-groups .info{margin-top: -5px;margin-bottom:2vh;}
+.login .form-groups .info .auto .iconfont{color: #fff;font-size: 16px;margin-right: 5px;float: left;}
+.login .form-groups .info .auto {font-size: 14px;color: #fff;text-align: left;cursor: pointer;}
+.login .form-groups .info .forget{float: right;font-size: 14px;text-decoration: underline;}
+.login .form-groups .info .forget a{color: #fff;}
+.login .form-groups .info .forget a:focus{color: #fff;}
+.login .form-groups .prompt{font-size: 14px;color: #f7ff13;text-align: center;height: 20px;line-height: 20px;margin-bottom: 1.3vh;}
+.login .form-groups .prompt .iconfont{margin-right: 5px;}
+.login .form-groups .btns{width: 100%;}
+.login .form-groups .btns input{font-size: 18px;color: #fff;letter-spacing: 2px;cursor: pointer;background: linear-gradient(to bottom, #19c1e6,#29bfc0,#35bda6);background: -webkit-linear-gradient(to bottom,#19c1e6,#29bfc0,#35bda6);border: 1px solid transparent;}
+.login .form-groups .btns input:hover{background: linear-gradient(to top, #19c1e6,#29bfc0,#35bda6);background: -webkit-linear-gradient(to top,#19c1e6,#29bfc0,#35bda6);}
+.login .form-groups .btns input.disabled{background: #ddd;}
+.login .form-groups .btns input.disabled:hover{background: #ddd;}
+.login .form-groups .form-group label.active .iconfont{color: #00d3ff;}
+.login .form-groups .form-group .clear{position: absolute;top: 0;right: 0.5vw;height: 40px;display: block;line-height: 40px;width: 20px;text-align: center;cursor: pointer;color: #999;}
+.login .form-groups .form-group .clear .iconfont{font-size: 22px;}
+.login .form-groups .form-group .clear.active{display: block;}
+.login .form-groups .form-group .form-control.error{border: 1px solid #f00;}
+.login .copyRight{position: absolute;bottom: 10px;width: 100%;text-align: center;font-size: 14px;color: #fff;}
